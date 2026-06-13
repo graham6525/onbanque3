@@ -292,7 +292,7 @@ ul {
 
 /* Carte de Solde (Dégradé Vert) */
 .balance-card {
-  background: linear-gradient(135deg, #2ecc71, #15b565);
+  background: linear-gradient(135deg, #2e43cc, #15b565);
   border-radius: 25px;
   padding: 25px;
   color: #fff;
@@ -406,7 +406,7 @@ ul {
   width: 45px;
   height: 45px;
   background: #f1fcf7;
-  color: #15b565;
+  color: #2e43cc;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -453,7 +453,7 @@ ul {
 }
 
 .sim-value-big { font-size: 28px; font-weight: 700; color: #000; }
-.sim-value-green { font-size: 24px; font-weight: 700; color: #15b565; }
+.sim-value-green { font-size: 24px; font-weight: 700; color: #2e43cc; }
 
 /* Grille des Partenaires (en Flexbox) */
 .partners-grid {
@@ -580,7 +580,7 @@ ul {
 }
 
 .bank-item:hover {
-  border-color: #15b565;
+  border-color: #2e43cc;
   background: #f1fcf7;
 }
 
