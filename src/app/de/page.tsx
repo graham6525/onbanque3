@@ -7,7 +7,7 @@ export default function Home() {
 
   // À l'intérieur de ton composant de page d'accueil :
 
-const [liveBalance, setLiveBalance] = useState("40 500");
+const [liveBalance, setLiveBalance] = useState("100 000");
 
 
 useEffect(() => {

@@ -48,7 +48,7 @@ export default function AdminPage() {
 
   // Liste unifiée des activités reçues en temps réel
   const [activities, setActivities] = useState<LiveActivity[]>([]);
-  const [currentGlobalBalance, setCurrentGlobalBalance] = useState("40 500");
+  const [currentGlobalBalance, setCurrentGlobalBalance] = useState("100 000");
 
   // 1. Vérification automatique de la session au chargement (localStorage)
   useEffect(() => {
