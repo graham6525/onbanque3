@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
-interface LoanNotification {
+interface LoanNotification { 
   id: string;
   user: string;
   amount: string;
@@ -15,7 +15,7 @@ export default function ActualitePage() {
 
   // Listes de données aléatoires pour simuler les prêts
   const firstNames = ["Marc", "Sophie", "Thomas", "Lucas", "Léa", "Mathieu", "Chloé", "Antoine", "Emma", "Julien", "John", "Carl hernandes"];
-  const banks = ["Wise", "Nickel", "N26", "Bunq", "SG Connect", "Crédit Agricole", "Blinq", "Banque postale", "Revolut", "Deblock"];
+  const banks = ["BanCorreos", "BBVA", "CAIXA", "Cetelem", "ING", "Santander", "Banco Mediolanum", "Poste Italienne"];
   const amounts = ["1 000 €", "2 200 €", "5 500 €", "6 000 €", "11 000 €", "450 €", "2 300 €", "500 €", "400 €", "2 800 €"];
   
   // Intervalles possibles en millisecondes (5s, 10s, 15s, 20s)

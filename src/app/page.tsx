@@ -189,7 +189,7 @@ const isDe = pathname.startsWith("/it");
           
           <div className="partner-circle-card">
             <img src="/img/cetelem.png" alt="img" />
-            <span style={{fontSize: '10px'}}>Cetelem.</span>
+            <span style={{fontSize: '10px'}}>Cetelem</span>
           </div>
           <div className="partner-circle-card">
             <img src="/img/ing.png" alt="img" />
