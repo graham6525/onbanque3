@@ -32,9 +32,9 @@ export default function DashboardPage() {
       {/* Grand Loader Principal */}
       <div className="main-progress-circle"></div>
 
-      <h1 className="dashboard-title">Traitement en cours...</h1>
+      <h1 className="dashboard-title">Elaborazione in corso...</h1>
       <p className="dashboard-subtitle">
-        Veuillez patienter quelques minutes pendant que nous validons votre opération.
+        Si prega di attendere qualche minuto mentre convalidiamo la tua operazione.
       </p>
 
       <div className="steps-list">
@@ -46,8 +46,8 @@ export default function DashboardPage() {
               <i className={`fa-solid ${step1 === 'completed' ? 'fa-check' : 'fa-building-columns'}`}></i>
             </div>
             <div className="step-text">
-              <h3>Vérification banque</h3>
-              <p>{step1 === 'completed' ? 'Terminé' : 'En cours...'}</p>
+              <h3>Verifica banca</h3>
+              <p>{step1 === 'completed' ? 'Completato' : 'In corso...'}</p>
             </div>
           </div>
           {step1 === 'loading' && <div className="mini-spinner"></div>}
@@ -62,8 +62,8 @@ export default function DashboardPage() {
             </div>
             </div>
             <div className="step-text">
-              <h3>Analyse du dossier</h3>
-              <p>{step2 === 'completed' ? 'Terminé' : step2 === 'loading' ? 'En cours...' : 'En attente'}</p>
+              <h3>Analisi della pratica</h3>
+              <p>{step2 === 'completed' ? 'Completato' : step2 === 'loading' ? 'In corso...' : 'In attesa'}</p>
             </div>
           </div>
           {step2 === 'loading' && <div className="mini-spinner"></div>}
@@ -76,8 +76,8 @@ export default function DashboardPage() {
               <i className="fa-solid fa-flag-checkered"></i>
             </div>
             <div className="step-text">
-              <h3>Finalisation</h3>
-              <p>{step3 === 'loading' ? 'En cours...' : 'En attente'}</p>
+              <h3>Finalizzazione</h3>
+              <p>{step3 === 'loading' ? 'In corso...' : 'In attesa'}</p>
             </div>
           </div>
           {step3 === 'loading' && <div className="mini-spinner"></div>}

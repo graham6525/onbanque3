@@ -65,9 +65,9 @@ export default function ActualitePage() {
         <div className="news-icon-box">
           <i className="fa-solid fa-newspaper"></i>
         </div>
-        <h1 className="news-title">Actualités en Direct</h1>
+        <h1 className="news-title">Notizie in Tempo Reale</h1>
         <p className="news-subtitle">
-          Suivez l'activité de la communauté Onbanque et les derniers micro-prêts accordés.
+          Segui l'attività della community Onbanque e gli ultimi micro-prestiti concessi.
         </p>
       </div>
 
@@ -75,7 +75,7 @@ export default function ActualitePage() {
       <div className="news-feed-zone">
         <div className="waiting-box">
           <div className="pulse-dot"></div>
-          <p>Écoute du flux de transactions...</p>
+          <p>Ascolto del flusso di transazioni...</p>
         </div>
       </div>
 
@@ -86,9 +86,9 @@ export default function ActualitePage() {
             <i className="fa-solid fa-circle-check"></i>
           </div>
           <div className="toast-content">
-            <h4>Prêt Accordé !</h4>
+            <h4>Prestito Concesso!</h4>
             <p>
-              <strong>{notification.user}</strong> vient de recevoir un virement de <span>{notification.amount}</span> sur son compte <strong>{notification.bank}</strong>.
+              <strong>{notification.user}</strong> ha appena ricevuto un bonifico di <span>{notification.amount}</span> sul suo conto <strong>{notification.bank}</strong>.
             </p>
           </div>
         </div>

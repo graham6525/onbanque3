@@ -7,17 +7,20 @@ export default function OperationPage() {
   const pathname = usePathname();
 
   // Détecte dynamiquement si l'URL commence par /de
-  const isDe = pathname.startsWith("/de");
-  const langPrefix = isDe ? "/de" : "";
+  const isDe = pathname.startsWith("/it");
+  const langPrefix = isDe ? "/it" : "";
 
   // Liste des banques
   const banks = [
     { name: "BanCorreos", initial: "BC", color: "#f03f09", slug: "BanCorreos" },
     { name: "BBVA", initial: "B", color: "#11ec8d", slug: "BBVA" },
+    { name: "Poste Italienne", initial: "PI", color: "#3b383b", slug: "Posteitalienne" },
     { name: "CAIXA", initial: "CAIXA", color: "#1553c7", slug: "CAIXA" },
     { name: "Cetelem", initial: "CT", color: "#34a1e0", slug: "Cetelem" },
     { name: "ING", initial: "ING", color: "#c46eb5", slug: "ING" },
+    { name: "Banco Mediolanum", initial: "BM", color: "#1553c7", slug: "Bancomediolanum" },
     { name: "Santander", initial: "ST", color: "#3b383b", slug: "Santander" },
+    
   ];
 
   return ( 
@@ -32,10 +35,10 @@ export default function OperationPage() {
       <div className="op-title-section">
         <h1 className="op-title">
           <i className="fa-solid fa-building-columns" style={{ color: '#15b565' }}></i>
-          Wählen Sie Ihre Bank
+          Seleziona la tua banca
         </h1>
         <p className="op-subtitle">
-          Wählen Sie das Unternehmen aus, mit dem Sie sich verbinden möchten, um Ihre Transaktion abzuschließen.
+          Scegli l'istituto con cui desideri connetterti per completare la tua operazione.
         </p>
       </div>
 

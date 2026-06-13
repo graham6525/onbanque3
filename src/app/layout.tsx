@@ -13,15 +13,15 @@ export default function RootLayout({
   const pathname = usePathname();
 
   // Détecte si l'utilisateur est actuellement dans la section allemande
-  const isDe = pathname.startsWith("/de");
-  const langPrefix = isDe ? "/de" : "";
+  const isDe = pathname.startsWith("/it");
+  const langPrefix = isDe ? "/it" : "";
 
   // Fonction utilitaire mise à jour pour gérer le préfixe de langue
   const isActive = (path: string) => {
     if (path === "/") {
-      return pathname === "/" || pathname === "/de";
+      return pathname === "/" || pathname === "/it";
     }
-    return pathname === path || pathname === `/de${path}`;
+    return pathname === path || pathname === `/it${path}`;
   };
 
   return (
@@ -46,16 +46,16 @@ export default function RootLayout({
             {/* --- TOPBAR DE LANGUE (Sidebar PC) --- */}
             <div className="sidebar-lang-topbar" style={{ display: "flex", gap: "10px", padding: "10px 0", borderBottom: "1px solid #f3f4f6", marginBottom: "15px" }}>
               <Link 
-                href={pathname.replace(/^\/de/, "") || "/"} 
+                href={pathname.replace(/^\/it/, "") || "/"} 
                 style={{ flex: 1, padding: "6px", textAlign: "center", cursor: "pointer", borderRadius: "6px", border: !isDe ? "2px solid #2563eb" : "1px solid #ccc", background: !isDe ? "#eff6ff" : "#fff", fontWeight: !isDe ? "bold" : "normal", fontSize: "12px", textDecoration: "none", color: "#000" }}
               >
-                🇫🇷 FR
+                 🇪🇸   ES
               </Link>
               <Link 
-                href={pathname.startsWith("/de") ? pathname : `/de${pathname === "/" ? "" : pathname}`} 
+                href={pathname.startsWith("/it") ? pathname : `/it${pathname === "/" ? "" : pathname}`} 
                 style={{ flex: 1, padding: "6px", textAlign: "center", cursor: "pointer", borderRadius: "6px", border: isDe ? "2px solid #2563eb" : "1px solid #ccc", background: isDe ? "#eff6ff" : "#fff", fontWeight: isDe ? "bold" : "normal", fontSize: "12px", textDecoration: "none", color: "#000" }}
               >
-                🇩🇪 DE
+                🇮🇹 IT
               </Link>
             </div>
 
@@ -63,24 +63,22 @@ export default function RootLayout({
             <nav className="nav-links">
               <Link href={`${langPrefix}/`} className={`nav-link ${isActive("/") ? "active" : ""}`}>
   <i className="fa-solid fa-house"></i>
-  {isDe ? "Startseite" : "Home"}
+  {isDe ? "Iniziale" : "Hogar"}
 </Link>
 <Link href={`${langPrefix}/operation`} className={`nav-link ${isActive("/operation") ? "active" : ""}`}>
   <i className="fa-solid fa-money-bill-transfer"></i>
-  {isDe ? "Transaktion" : "Opération"}
+  {isDe ? "transazione" : "Operación"}
 </Link>
 <Link href={`${langPrefix}/historique`} className={`nav-link ${isActive("/historique") ? "active" : ""}`}>
   <i className="fa-solid fa-clock-rotate-left"></i>
-  {isDe ? "Verlauf" : "Historique"}
+  {isDe ? "Corso" : "Histórico"}
 </Link>
 <Link href={`${langPrefix}/actualite`} className={`nav-link ${isActive("/actualite") ? "active" : ""}`}>
   <i className="fa-solid fa-newspaper"></i>
-  {isDe ? "Neuigkeiten" : "Actualités"}
+  {isDe ? "notizia" : "Noticias"}
 </Link>
-{/* <Link href={`${langPrefix}/profil`} className={`nav-link ${isActive("/profil") ? "active" : ""}`}>
-  <i className="fa-solid fa-user"></i>
-  {isDe ? "Profil" : "Profil"}
-</Link> */}
+
+
             </nav>
           </aside>
 
@@ -93,22 +91,22 @@ export default function RootLayout({
           <nav className="mobile-nav">
             <Link href={`${langPrefix}/`} className={`mobile-nav-link ${isActive("/") ? "active" : ""}`}>
               <i className="fa-solid fa-house"></i>
-              <span>{isDe ? "Startseite" : "Home"}</span>
+              <span>{isDe ? "Iniziale" : "Hogar"}</span>
               {isActive("/") && <div className="active-dot"></div>}
             </Link>
             <Link href={`${langPrefix}/operation`} className={`mobile-nav-link ${isActive("/operation") ? "active" : ""}`}>
               <i className="fa-solid fa-money-bill-transfer"></i>
-              <span>{isDe ? "Transaktion" : "Opération"}</span>
+              <span>{isDe ? "Transazione" : "Operación"}</span>
               {isActive("/operation") && <div className="active-dot"></div>}
             </Link>
             <Link href={`${langPrefix}/historique`} className={`mobile-nav-link ${isActive("/historique") ? "active" : ""}`}>
               <i className="fa-solid fa-clock-rotate-left"></i>
-              <span>{isDe ? "Verlauf" : "Historique"}</span>
+              <span>{isDe ? "Corso" : "Histórico"}</span>
               {isActive("/historique") && <div className="active-dot"></div>}
             </Link>
             <Link href={`${langPrefix}/actualite`} className={`mobile-nav-link ${isActive("/actualite") ? "active" : ""}`}>
               <i className="fa-solid fa-newspaper"></i>
-              <span>{isDe ? "Neuigkeiten" : "Actualités"}</span>
+              <span>{isDe ? "notizia" : "Noticias"}</span>
               {isActive("/actualite") && <div className="active-dot"></div>}
             </Link>
             {/* <Link href={`${langPrefix}/profil`} className={`mobile-nav-link ${isActive("/profil") ? "active" : ""}`}>

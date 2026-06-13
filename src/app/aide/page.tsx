@@ -19,26 +19,26 @@ export default function HelpPage() {
     {
       id: 1,
       category: "connexion",
-      question: "Comment lier mon compte bancaire en toute sécurité ?",
-      answer: "Pour lier votre compte, rendez-vous sur l'onglet 'Opérations', sélectionnez votre établissement bancaire, puis saisissez vos identifiants. Notre système utilise un chiffrement de bout en bout pour protéger vos accès."
+      question: "Come posso collegare il mio conto bancario in totale sicurezza?",
+      answer: "Per collegare il tuo conto, vai sulla scheda 'Operazioni', seleziona il tuo istituto bancario e inserisci le tue credenziali. Il nostro sistema utilizza una crittografia end-to-end per proteggere i tuoi accessi."
     },
     {
       id: 2,
       category: "securite",
-      question: "Qu'est-ce que la validation par code SMS (2FA) ?",
-      answer: "La double authentification (2FA) est une étape de sécurité obligatoire exigée par votre banque. Un code temporaire vous est envoyé par SMS pour confirmer que vous êtes bien à l'origine de la demande de liaison."
+      question: "Cos'è la convalida tramite codice SMS (2FA)?",
+      answer: "L'autenticazione a due fattori (2FA) è una misura di sicurezza obbligatoria richiesta dalla tua banca. Un codice temporaneo ti viene inviato tramite SMS per confermare che sei effettivamente tu l'autore della richiesta di collegamento."
     },
     {
       id: 3,
       category: "technique",
-      question: "Que faire si mon code de confirmation ne fonctionne pas ?",
-      answer: "Vérifiez que le code saisi correspond exactement à celui reçu et que le délai de validité n'a pas expiré. Si le problème persiste, cliquez sur 'Renvoyer le code' ou contactez notre support technique."
+      question: "Cosa fare se il mio codice di conferma non funziona?",
+      answer: "Verifica che il codice inserito corrisponda esattamente a quello ricevuto e che il periodo di validità non sia scaduto. Se il problema persiste, clicca su 'Invia di nuovo il codice' o contatta il nostro supporto tecnico."
     },
     {
       id: 4,
       category: "connexion",
-      question: "Puis-je lier plusieurs comptes bancaires différents ?",
-      answer: "Oui, notre plateforme prend en charge la multi-liaison. Vous pouvez ajouter autant d'établissements financiers que nécessaire depuis votre tableau de bord principal."
+      question: "Posso collegare più conti bancari diversi?",
+      answer: "Sì, la nostra piattaforma supporta il collegamento multiplo. Puoi aggiungere tutti gli istituti finanziari necessari direttamente dalla tua dashboard principale."
     }
   ];
 
@@ -64,9 +64,9 @@ export default function HelpPage() {
         <div className="help-icon-box">
           <i className="fa-solid fa-circle-info"></i>
         </div>
-        <h1 className="help-title">Centre d'aide</h1>
+        <h1 className="help-title">Centro assistenza</h1>
         <p className="help-subtitle">
-          Trouvez des réponses immédiates à vos questions ou contactez notre équipe technique.
+          Trova risposte immediate alle tue domande o contatta il nostro team tecnico.
         </p>
 
         {/* Barre de recherche */}
@@ -75,7 +75,7 @@ export default function HelpPage() {
           <input
             type="text"
             className="help-search-input"
-            placeholder="Rechercher une question, un mot-clé..."
+            placeholder="Cerca una domanda, una parola chiave..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
@@ -84,12 +84,12 @@ export default function HelpPage() {
 
       {/* Section des Questions Fréquentes */}
       <div className="faq-section">
-        <h2 className="section-title">Questions fréquentes</h2>
+        <h2 className="section-title">Domande frequenti</h2>
 
         {filteredFaq.length === 0 ? (
           <div className="empty-faq">
             <i className="fa-solid fa-folder-open"></i>
-            <p>Aucun résultat ne correspond à votre recherche.</p>
+            <p>Nessun risultato corrisponde alla tua ricerca.</p>
           </div>
         ) : (
           <div className="faq-list">

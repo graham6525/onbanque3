@@ -5,20 +5,20 @@
 
 // export default function ProfilPage() {
 //   const menuItems = [
-//     { icon: "fa-newspaper", label: "Actualités", path: "/actualite" },
-//     { icon: "fa-circle-question", label: "Aide & support", path: "/aide" },
-//     { icon: "fa-right-from-bracket", label: "Se déconnecter", path: "/login", isLogout: true },
+//     { icon: "fa-newspaper", label: "Novità", path: "/it/actualite" },
+//     { icon: "fa-circle-question", label: "Assistenza e Supporto", path: "/it/aide" },
+//     { icon: "fa-right-from-bracket", label: "Disconnetti", path: "/it/login", isLogout: true },
 //   ];
 
 //   return (
 //     <div className="profile-container">
-//       <h1 className="profile-header">Profil</h1>
+//       <h1 className="profile-header">Profilo</h1>
 
 //       {/* Carte d'identité utilisateur */}
 //       <div className="profile-user-card">
 //         <div className="profile-avatar">U</div>
 //         <div className="user-details">
-//           <h2>Utilisateur Onbanque</h2>
+//           <h2>Utente Onbanque</h2>
 //           {/* <p>user@onbanque.com</p> */}
 //         </div>
 //       </div>

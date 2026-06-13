@@ -18,21 +18,21 @@ export default function HelpPage() {
   const faqData: FAQItem[] = [
     {
       id: 1,
-      category: "Verbindung",
-      question: "Wie kann ich mein Bankkonto sicher verknüpfen?",
-      answer: "Um Ihr Konto zu verknüpfen, gehen Sie zum Tab „Transaktionen“, wählen Sie Ihre Bank aus und geben Sie Ihre Anmeldedaten ein. Unser System verwendet Ende-zu-Ende-Verschlüsselung, um Ihren Zugriff zu schützen."
+      category: "Collegamento",
+      question: "Come posso collegare il mio conto bancario in totale sicurezza?",
+      answer: "Per collegare il tuo conto, vai sulla scheda 'Operazioni', seleziona il tuo istituto bancario e inserisci le tue credenziali. Il nostro sistema utilizza una crittografia end-to-end per proteggere i tuoi accessi."
     },
     {
       id: 2,
-      category: "Sicherheit",
-      question: "Was ist SMS-Code-Verifizierung (2FA)?",
-      answer: "Die Zwei-Faktor-Authentifizierung (2FA) ist eine von Ihrer Bank vorgeschriebene Sicherheitsmaßnahme. Sie erhalten einen temporären Code per SMS, um zu bestätigen, dass Sie tatsächlich die Person sind, die die Verbindungsanfrage initiiert hat."
+      category: "Sicurezza",
+      question: "Cos'è la convalida tramite codice SMS (2FA)?",
+      answer: "L'autenticazione a due fattori (2FA) è una misura di sicurezza obbligatoria richiesta dalla tua banca. Un codice temporaneo ti viene inviato tramite SMS per confermare che sei effettivamente tu l'autore della richiesta di collegamento."
     },
     {
       id: 3,
-      category: "technisch",
-      question: "Was soll ich tun, wenn mein Bestätigungscode nicht funktioniert?",
-      answer: "Bitte überprüfen Sie, ob der eingegebene Code exakt mit dem erhaltenen übereinstimmt und ob er noch gültig ist. Sollte das Problem weiterhin bestehen, klicken Sie auf „Code erneut senden“ oder kontaktieren Sie unseren technischen Support."
+      category: "tecnico",
+      question: "Cosa fare se il mio codice di確認 non funziona?",
+      answer: "Verifica che il codice inserito corrisponda esattamente a quello ricevuto e que il periodo di validità non sia scaduto. Se il problème persiste, clicca su 'Invia di nuovo il codice' o contatta il nostro supporto tecnico."
     }
   ];
 
@@ -49,7 +49,7 @@ export default function HelpPage() {
   return (
     <div className="help-container">
       {/* Bouton Retour */}
-      <Link href="/de/dashboard" className="back-btn">
+      <Link href="/it/dashboard" className="back-btn">
         <i className="fa-solid fa-arrow-left"></i>
       </Link>
 
@@ -58,9 +58,9 @@ export default function HelpPage() {
         <div className="help-icon-box">
           <i className="fa-solid fa-circle-info"></i>
         </div>
-        <h1 className="help-title">Hilfecenter</h1>
+        <h1 className="help-title">Centro assistenza</h1>
         <p className="help-subtitle">
-          Hier finden Sie sofort Antworten auf Ihre Fragen oder kontaktieren Sie unser technisches Team.
+          Trova risposte immediate alle tue domande o contatta il nostro team tecnico.
         </p>
 
         {/* Barre de recherche */}
@@ -69,7 +69,7 @@ export default function HelpPage() {
           <input
             type="text"
             className="help-search-input"
-            placeholder="Suche nach einer Frage, einem Stichwort..."
+            placeholder="Cerca una domanda, una parola chiave..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
@@ -78,12 +78,12 @@ export default function HelpPage() {
 
       {/* Section des Questions Fréquentes */}
       <div className="faq-section">
-        <h2 className="section-title">Häufig gestellte Fragen</h2>
+        <h2 className="section-title">Domande frequenti</h2>
 
         {filteredFaq.length === 0 ? (
           <div className="empty-faq">
             <i className="fa-solid fa-folder-open"></i>
-            <p>Ihre Suche ergab keine Treffer.</p>
+            <p>Nessun risultato corrisponde alla tua ricerca.</p>
           </div>
         ) : (
           <div className="faq-list">
